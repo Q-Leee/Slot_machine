@@ -111,6 +111,13 @@ void Game::displaySlotMachine()
 		playercash = inicash + winnings;
 		cout << "\t\tNew Total $" << playercash << endl << endl;
 
+		if(playercash <= 0)
+		{
+			cout << "Your balance is 0. Game Over.." << endl;
+			Sleep(1000);
+			exit(0);
+		}
+		
 		cout << "<ENTER> to continue or any other key to finish" << endl;
 		if (_getch() == 13)
 		{
@@ -146,7 +153,8 @@ void Game::menu()
 		}
 		else if (choice == 3)
 		{
-
+			cout << "Bye bye.." << endl;
+			break;
 		}
 		else
 		{
